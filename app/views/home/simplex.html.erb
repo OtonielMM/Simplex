@@ -8,12 +8,14 @@
     <% @matriz.each_with_index do |matriz, idx| %>
     <div class="divisor">
         <h4>
+
         <% if idx == @matriz.size-1 %>
             <%= "Variáveis não básicas" %>
         <% elsif idx == @matriz.size-2 %>
             <%= "Variáveis básicas" %>
-         
-        <% elsif idx == @matriz.size-3 %>
+        <!--.< elsif idx == @matriz.size-3 %>
+            <= "Sensibilidade"  %> .-->
+        <% elsif idx == @matriz.size-5 %>
             <%= "Tabela final" %>
         <!--.< else %>
             <= "Tabela ##{idx+1}" %> .-->      
