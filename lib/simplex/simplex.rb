@@ -236,13 +236,13 @@ module Simplex
             coluna.compact!
             coluna.empty?
         end
-        
-       def self.sensibilidade(matriz = [], valores_restricao = [], folga_valores = [], variaveis_limite_restricao = [])
+
+        def self.sensibilidade(matriz = [], valores_restricao = [], folga_valores = [], variaveis_limite_restricao = [])
             sensibilidade = []
             sensibilidade << ['Sensibilidade', 'Preço sombra', 'Limite', 'Valor']
 
             matriz[1...-1].size.times do |idx|
-                sensibilidade << Array.new(0) { |el| "r#{idx+1}" }
+                sensibilidade << Array.new(4) { |el| "r#{idx+1}" }
             end
 
             limites = []
@@ -279,7 +279,6 @@ module Simplex
 
             sensibilidade
         end
-        
 
         def self.variaveis_basicas(matriz = [])
             basicas = []
