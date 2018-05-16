@@ -27,7 +27,7 @@
             <tr>
             <% linha.each_with_index do |e, i| %>
                 <% if e.class == Float %>
-                <td><%= e.round(3) %></td>
+                <td><%= e.round(2) %></td>
                 <% else %>
                 <td class="active"><%= e %></td>
                 <% end %>
