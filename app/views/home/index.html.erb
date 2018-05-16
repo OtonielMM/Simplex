@@ -191,9 +191,9 @@
                     if (show_all == 'yes') {
                         $('.result').html(res);
                     } else {
-                        var iterator = 2,
+                        var iterator = 3,
                             tables = res.reverse().filter(function(e) {
-                                if ($(e).hasClass('divisor') && iterator < 5) {
+                                if ($(e).hasClass('divisor') && iterator > 0) {
                                     iterator++;
 
                                     return $(e);
