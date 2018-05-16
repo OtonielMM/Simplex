@@ -236,8 +236,8 @@ module Simplex
             coluna.compact!
             coluna.empty?
         end
-
-        /def self.sensibilidade(matriz = [], valores_restricao = [], folga_valores = [], variaveis_limite_restricao = [])
+        
+       '''def self.sensibilidade(matriz = [], valores_restricao = [], folga_valores = [], variaveis_limite_restricao = [])
             sensibilidade = []
             sensibilidade << ['Sensibilidade', 'Preço sombra', 'Limite', 'Valor']
 
@@ -278,7 +278,8 @@ module Simplex
             end
 
             sensibilidade
-        end /
+        end
+        '''
 
         def self.variaveis_basicas(matriz = [])
             basicas = []
