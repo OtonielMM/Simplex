@@ -13,10 +13,11 @@
             <%= "Variáveis não básicas" %>
         <% elsif idx == @matriz.size-2 %>
             <%= "Variáveis básicas" %>
+        <% elsif idx == @matriz.size-3 %>
+            <%= "Tabela final" %>
         <!--. < elsif idx == @matriz.size-3 >
             <= "Sensibilidade"  > -->
-        <% elsif idx == @matriz.size-4 %>
-            <%= "Tabela final" %>
+        
         <!--.< else >
             <= "Tabela ##{idx+1}" > -->    
         <% end %>
@@ -27,7 +28,7 @@
             <tr>
             <% linha.each_with_index do |e, i| %>
                 <% if e.class == Float %>
-                <td><%= e.round(4) %></td>
+                <td><%= e.round(3) %></td>
                 <% else %>
                 <td class="active"><%= e %></td>
                 <% end %>
