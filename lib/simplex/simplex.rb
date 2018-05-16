@@ -261,7 +261,7 @@ module Simplex
                 limites[idx] << limites_valores.min
             end
 
-            sensibilidade[1..-1].each_with_index do |array, idx|
+            '''sensibilidade[1..-1].each_with_index do |array, idx|
                 array[1] = folga_valores[idx]
 
                 if valores_restricao[idx] == nil
@@ -275,9 +275,10 @@ module Simplex
                 #else
                    # array[2] = '-'
                 #end
+
             end
 
-            sensibilidade
+            sensibilidade '''
         end
 
         def self.variaveis_basicas(matriz = [])
