@@ -26,7 +26,7 @@
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="expressao">Expressão</label>
-                                <input type="text" name="expressao" class="form-control" id="expressao" placeholder="e.g.: 3x1 + 2x2">
+                                <input type="text" name="expressao" class="form-control" id="expressao" placeholder="ex.: 3x1 + 2x2">
                             </div>
                         </div>
                     </div>
@@ -42,7 +42,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="input-group">
-                                <input type="text" name="restricoes[]" class="form-control input-restr" placeholder="e.g.: 5x1 + 11x2 <= 18">
+                                <input type="text" name="restricoes[]" class="form-control input-restr" placeholder="ex.: 5x1 + 11x2 <= 18">
                                 <span class="input-group-btn">
                                     <button type="button" class="btn btn-danger" disabled><i class="glyphicon glyphicon-remove"></i></button>
                                     <button type="button" class="btn btn-success btn-restr-plus"><i class="glyphicon glyphicon-plus"></i></button>
@@ -65,7 +65,7 @@
                         <div class="col-md-12"> 
                             <div class="form-group"> 
                                 <label for="maxvoltas">Máx. iterações</label> 
-                                <<input type="number" name="maxvoltas" min="1" class="form-control" id="maxvoltas" placeholder="e.g.: 20"> 
+                                <<input type="number" name="maxvoltas" min="1" class="form-control" id="maxvoltas" placeholder="ex.: 20"> 
                              </div> 
                          </div> 
                     </div> 
@@ -120,7 +120,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="e.g.: 5x1 + 11x2 <= 18">
+                            <input type="text" class="form-control" placeholder="ex: 5x1 + 11x2 <= 18">
                             <span class="input-group-btn">
                                 <button type="button" class="btn btn-danger btn-restr-minus"><i class="glyphicon glyphicon-remove"></i></button>
                                 <button type="button" class="btn btn-success btn-restr-plus"><i class="glyphicon glyphicon-plus"></i></button>
@@ -204,7 +204,7 @@
                     }
                 })
                 .fail(function(j, k, w) {
-                    $('.result').html('<div class="alert alert-danger"><p><strong>Não foi possível realizar o cálculo.</strong></p><p>&nbsp;</p><p>Lembre-se que as expressões e restrições devem estar com seus sinais separados, e.g.: <code>3x1 + 2x2</code> ou <code>5x1 + 11x2 <= 18</code>.</p></div>');
+                    $('.result').html('<div class="alert alert-danger"><p><strong>Não foi possível realizar o cálculo.</strong></p><p>&nbsp;</p><p>Lembre-se que as expressões e restrições devem estar com seus sinais separados, ex.: <code>3x1 + 2x2</code> ou <code>5x1 + 11x2 <= 18</code>.</p></div>');
                 });
             });
         });
