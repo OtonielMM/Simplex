@@ -275,10 +275,10 @@ module Simplex
                 #else
                    # array[2] = '-'
                 #end
-
+                '''
             end
 
-            sensibilidade '''
+            sensibilidade
         end
 
         def self.variaveis_basicas(matriz = [])
