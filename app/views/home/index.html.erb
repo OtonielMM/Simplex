@@ -57,7 +57,7 @@
 
                     <div class="more-restr"></div>
 
-                    <<div class="row">
+                    <div class="row">
                         <div class="col-md-12">&nbsp;</div>
                     </div>
 
@@ -129,9 +129,9 @@
                     </div>
                 </div>
 
-               <!--. <div class="row">
+                <div class="row">
                     <div class="col-md-12">&nbsp;</div>
-                </div> -->
+                </div>
             </div>
         </div>
 
@@ -191,9 +191,9 @@
                     if (show_all == 'yes') {
                         $('.result').html(res);
                     } else {
-                        var iterator = 0,
+                        var iterator = 2,
                             tables = res.reverse().filter(function(e) {
-                                if ($(e).hasClass('divisor') && iterator <= 3) {
+                                if ($(e).hasClass('divisor') && iterator < 3) {
                                     iterator++;
 
                                     return $(e);
