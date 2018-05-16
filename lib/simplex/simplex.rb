@@ -271,7 +271,7 @@ module Simplex
                 end
 
                 #if array[1] != 0
-                    array[2] = "#{array[-1] + limites[idx].min} - #{array[-1] + limites[idx].max}"
+                   # array[2] = "#{array[-1] + limites[idx].min} - #{array[-1] + limites[idx].max}"
                 #else
                    # array[2] = '-'
                 #end
