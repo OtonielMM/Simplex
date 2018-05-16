@@ -261,9 +261,9 @@ module Simplex
                 limites[idx] << limites_valores.min
             end
 
-            '''sensibilidade[1..-1].each_with_index do |array, idx|
+            sensibilidade[1..-1].each_with_index do |array, idx|
                 array[1] = folga_valores[idx]
-
+                '''
                 if valores_restricao[idx] == nil
                     array[-1] = @valores_ultima_col[idx]
                 else
