@@ -240,13 +240,13 @@ module Simplex
         def self.sensibilidade(matriz = [], valores_restricao = [], folga_valores = [], variaveis_limite_restricao = [])
             sensibilidade = []
             sensibilidade << ['.', '.', '.', '.']
-            '''
+
             matriz[1...-1].size.times do |idx|
                 sensibilidade << Array.new(4) { |el| "r#{idx+1}" }
             end
 
             limites = []
-
+            '''
             variaveis_limite_restricao[0...-1].each_with_index do |array, idx|
                 limites << []
                 limites_valores = []
@@ -276,8 +276,8 @@ module Simplex
                    # array[2] = '-'
                 #end
 
-            end '''
-
+            end
+'''
             sensibilidade
         end
 
