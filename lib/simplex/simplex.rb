@@ -240,7 +240,7 @@ module Simplex
         def self.sensibilidade(matriz = [], valores_restricao = [], folga_valores = [], variaveis_limite_restricao = [])
             sensibilidade = []
             sensibilidade << ['.', '.', '.', '.']
-
+            '''
             matriz[1...-1].size.times do |idx|
                 sensibilidade << Array.new(4) { |el| "r#{idx+1}" }
             end
@@ -263,7 +263,7 @@ module Simplex
 
             sensibilidade[1..-1].each_with_index do |array, idx|
                 array[1] = folga_valores[idx]
-                '''
+
                 if valores_restricao[idx] == nil
                     array[-1] = @valores_ultima_col[idx]
                 else
@@ -275,8 +275,8 @@ module Simplex
                 #else
                    # array[2] = '-'
                 #end
-                '''
-            end
+
+            end '''
 
             sensibilidade
         end
