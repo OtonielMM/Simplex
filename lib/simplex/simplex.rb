@@ -241,9 +241,9 @@ module Simplex
             sensibilidade = []
             sensibilidade << ['.', '.', '.', '.']
 
-            #matriz[1...-1].size.times do |idx|
-                #sensibilidade << Array.new(4) { |el| "r#{idx+1}" }
-            #end
+            matriz[1...-1].size.times do |idx|
+                sensibilidade << Array.new(4) { |el| "r#{idx+1}" }
+            end
 
             limites = []
 
