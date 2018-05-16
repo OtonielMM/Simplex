@@ -242,7 +242,7 @@ module Simplex
             sensibilidade << ['.', '.', '.', '.'] #['Sensibilidade', 'Preço sombra', 'Limite', 'Valor']
 
             matriz[1...-1].size.times do |idx|
-                sensibilidade << Array.new(6) { |el| "r#{idx+1}" }
+                sensibilidade << Array.new(4) { |el| "r#{idx+1}" }
             end
 
             limites = []
@@ -271,7 +271,7 @@ module Simplex
                 end
 
                 if array[1] != 0
-                    array[2] = "#{array[-1] + limites[idx].min} - #{array[-1] + limites[idx].max}"
+                    array[2] = "" #"#{array[-1] + limites[idx].min} - #{array[-1] + limites[idx].max}"
                 else
                     array[2] = '-'
                 end
