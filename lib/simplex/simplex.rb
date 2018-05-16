@@ -237,47 +237,48 @@ module Simplex
             coluna.empty?
         end
 
-       # def self.sensibilidade(matriz = [], valores_restricao = [], folga_valores = [], variaveis_limite_restricao = [])
-        #    sensibilidade = []
-         #   sensibilidade << ['', '', '', ''] #['Sensibilidade', 'Preço sombra', 'Limite', 'Valor']
-#
- #           matriz[1...-1].size.times do |idx|
-  ##              sensibilidade << Array.new(4) { |el| "r#{idx+1}" }
-    #        end
-#
- #           limites = []
-#
- #           variaveis_limite_restricao[0...-1].each_with_index do |array, idx|
-  #              limites << []
-   #             limites_valores = []
-#
- #               array.each_with_index do |valor, valor_idx|
-  #                  if valor != 0
-   #                     limites_valores << (variaveis_limite_restricao[-1][valor_idx] * -1 / valor).round(0)
-    #                end
-     #           end
-#
- #               limites[idx] << limites_valores.max
-  #              limites[idx] << limites_valores.min
-   #         end
-#
- #           sensibilidade[1..-1].each_with_index do |array, idx|
-  #              array[1] = folga_valores[idx]
-#
- #               if valores_restricao[idx] == nil
-  #                  array[-1] = @valores_ultima_col[idx]
-   #             else
-    #                array[-1] = @valores_ultima_col[idx] - valores_restricao[idx]
-     #           end
-#
- #               if array[1] != 0
-  #                  array[2] = "#{array[-1] + limites[idx].min} - #{array[-1] + limites[idx].max}"
-   ##                array[2] = '-'
-     #           end
-      #      end
-#
- #           sensibilidade
-  #      end
+        def self.sensibilidade(matriz = [], valores_restricao = [], folga_valores = [], variaveis_limite_restricao = [])
+            sensibilidade = []
+            sensibilidade << ['', '', '', ''] #['Sensibilidade', 'Preço sombra', 'Limite', 'Valor']
+
+            matriz[1...-1].size.times do |idx|
+                sensibilidade << Array.new(4) { |el| "r#{idx+1}" }
+            end
+
+            limites = []
+
+            variaveis_limite_restricao[0...-1].each_with_index do |array, idx|
+                limites << []
+                limites_valores = []
+
+                array.each_with_index do |valor, valor_idx|
+                    if valor != 0
+                        limites_valores << (variaveis_limite_restricao[-1][valor_idx] * -1 / valor).round(0)
+                    end
+                end
+
+                limites[idx] << limites_valores.max
+                limites[idx] << limites_valores.min
+            end
+
+            sensibilidade[1..-1].each_with_index do |array, idx|
+                array[1] = folga_valores[idx]
+
+                if valores_restricao[idx] == nil
+                    array[-1] = @valores_ultima_col[idx]
+                else
+                    array[-1] = @valores_ultima_col[idx] - valores_restricao[idx]
+                end
+
+                if array[1] != 0
+                    array[2] = "#{array[-1] + limites[idx].min} - #{array[-1] + limites[idx].max}"
+                else
+                    array[2] = '-'
+                end
+            end
+
+            sensibilidade
+        end
 
         def self.variaveis_basicas(matriz = [])
             basicas = []
