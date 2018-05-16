@@ -241,11 +241,11 @@ module Simplex
             sensibilidade = []
             sensibilidade << ['.', '.', '.', '.'] #['Sensibilidade', 'Preço sombra', 'Limite', 'Valor']
 
-            matriz[1...-1].size.times do |idx|
-                sensibilidade << Array.new(4) { |el| "r#{idx+1}" }
-            end
+            #matriz[1...-1].size.times do |idx|
+                #sensibilidade << Array.new(4) { |el| "r#{idx+1}" }
+            #end
 
-            limites = []
+            #limites = []
 
             variaveis_limite_restricao[0...-1].each_with_index do |array, idx|
                 limites << []
