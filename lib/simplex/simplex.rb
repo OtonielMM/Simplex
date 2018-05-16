@@ -270,11 +270,11 @@ module Simplex
                     array[-1] = @valores_ultima_col[idx] - valores_restricao[idx]
                 end
 
-                if array[1] != 0
+                #if array[1] != 0
                     array[2] = "#{array[-1] + limites[idx].min} - #{array[-1] + limites[idx].max}"
-                else
-                    array[2] = '-'
-                end
+                #else
+                   # array[2] = '-'
+                #end
             end
 
             sensibilidade
