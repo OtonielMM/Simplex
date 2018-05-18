@@ -193,7 +193,7 @@
                     } else {
                         var iterator = 0,
                             tables = res.reverse().filter(function(e) {
-                                if ($(e).hasClass('divisor') && iterator < 2) {
+                                if ($(e).hasClass('divisor') && iterator != 3) {
                                     iterator++;
 
                                     return $(e);
